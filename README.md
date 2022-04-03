@@ -1,2 +1,0 @@
-# reactnativenft
-keep moving forward
