@@ -3,15 +3,21 @@
 import { DefaultTheme,NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { useFonts} from 'expo-font'
+import Details from "./screens/Details";
+import Home from "./screens/Home";
 
 
 const Stack = createStackNavigator()
 
 
+
 const theme = {
-   ...DefaultTheme.colors,
-   background:"transparent"
-}
+  ...DefaultTheme,
+  colors: {
+    ...DefaultTheme.colors,
+    background: "transparent",
+  },
+};
 
 
 
