@@ -1,11 +1,13 @@
-import React from 'react'
-import{Text,SafeAreaView} from 'react-native'
+import React,{useState} from 'react'
+import{Text,View,SafeAreaView,FlatList} from 'react-native'
+import {COLORS,NFTDATA} from '../constants'
+import { NFTCARD,HomeHeader,fOCUS } from '../components'
 
 const Home = () => {
   return (
-    
-  <Text>Home</Text>
- 
+   <SafeAreaView style={{flex:1}}>
+    <Text>This is the home</Text>
+   </SafeAreaView>
   )
 }
 
