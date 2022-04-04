@@ -1,4 +1,4 @@
-import {View, Text,FlatList} from 'react-native';
+import {View, Text,FlatList,Image} from 'react-native';
 import React from 'react';
 import {COLORS,SIZES,SHADOWS,assets} from '../constants';
 
@@ -32,13 +32,19 @@ export const EthPrice = () => {
 }
 
 
-export const ImageCmp = () => {
+export const ImageCmp = ({imgUrl,index}) => {
 
     
     return(
-        <View>
-          <Text>ImageCp</Text>
-        </View>
+      <Image
+       source={imgUrl} 
+       resizeMode="contain"
+       style={{ 
+           width:48,
+           height:48,
+           marginLeft: index === 0 ? 0 : -SIZES.font 
+       }}
+       />
     )
 }
 
@@ -47,7 +53,7 @@ export const People = () => {
     return(
         <View style={{flexDirection:'row'}}>
             {[assets.person02,assets.person03, assets.person04].map((imgUrl,index) =>(
-             <ImageCmp key={index}/>
+             <ImageCmp imgUrl={imgUrl} index={index} key={`People-${index}`} />
             ))}
         </View>
     )
@@ -68,7 +74,13 @@ export const EndDate = () => {
 
 
     return(
-        <View>
+        <View
+        style={{
+            paddingHorizontal:SIZES.font,
+            paddingVertical:SIZES.base,
+            backgroundColor:COLORS.white
+        }}
+        >
             <Text>Enddate</Text>
         </View>
     )
