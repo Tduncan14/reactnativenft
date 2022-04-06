@@ -1,13 +1,13 @@
 import React,{useState} from 'react'
 import{Text,View,SafeAreaView,FlatList} from 'react-native'
 import {COLORS, NFTData } from '../constants'
-import { NFTCard ,HomeHeader,FocusStatusBar } from '../components'
+import { NFTCard ,HomeHeader,FocusedStatusBar } from '../components'
 
 const Home = () => {
 
   return (
    <SafeAreaView style={{flex:1}}>
-     <FocusStatusBar background={COLORS.primary}/>
+     <FocusedStatusBar background={COLORS.primary}/>
 
 
      <View style={{flex:1}}>
