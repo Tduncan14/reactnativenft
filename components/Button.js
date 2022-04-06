@@ -47,7 +47,12 @@ export const RecButton = ({minWidth,fontSize,handlePress, ...props}) => {
        }}
        onPress={handlePress}
        >
-           <Text>
+           <Text style={{
+               fontFamily:FONTS.semiBold,
+               fontSize:fontSize,
+               color:COLORS.white,
+               textAlign:'center'
+           }}>
                place a bid
            </Text>
 
