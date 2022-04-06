@@ -16,6 +16,17 @@ const DetailsHeader = ({data,navigation}) => (
     <CircleButton
      imgUrl={assets.left}
      handlePress={() => navigation.goBack()}
+     left={15}
+     top={StatusBar.currentHeight + 10}
+    
+    />
+
+    
+<CircleButton
+     imgUrl={assets.heart}
+     handlePress={() => navigation.goBack()}
+     right={15}
+     top={StatusBar.currentHeight + 10}
     
     />
 
@@ -60,6 +71,10 @@ const Details = ({route,navigation}) => {
       ListHeaderComponent={() => (
         <>
         <DetailsHeader data={data} navigation={navigation} />
+        <SubInfo/>
+        <View style={{padding:SIZES.font}}>
+          <DetailsDesc data={data} />
+        </View>
         </>
       )}
 
