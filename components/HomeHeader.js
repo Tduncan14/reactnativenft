@@ -5,7 +5,7 @@ import { COLORS,FONTS,SIZES,assets } from '../constants';
 
 
 
-const HomeHeader = () => {
+const HomeHeader = ({onSearch}) => {
 
 
   return(
@@ -45,6 +45,40 @@ const HomeHeader = () => {
 
             </View>
             
+          </View>
+
+
+          <View style={{marginVertical:SIZES.font}}>
+            <Text style={{fontFamily:FONTS.regular, fontSize:SIZES.small, color:COLORS.white}}>
+              Hello, Sonya
+            </Text>
+
+            <Text style={{fontFamily:FONTS.bold, fontSize:SIZES.large,color:COLORS.white, marginTop:SIZES.base / 2}}>
+
+               Let's find a masterpiece
+
+            </Text>
+    
+          </View>
+
+          <View style={{marginTop:SIZES.font}}>
+             <View style={{
+               width:'100%',
+               borderRadius:SIZES.font,
+               backgroundColor:COLORS.gray,
+               flexDirection:'row',
+               alignItems:'center'
+             }}>
+                <Image source={assets.search} resizeMode='contain' style={{width:20, height:20, marginRight: SIZES.base}}/>
+
+                <TextInput
+                  placeholder='Search NFTs'
+                  style={{flex:1}}
+                  onChangeText={onSearch}
+
+                
+                />
+             </View>
           </View>
       </View>
   )
